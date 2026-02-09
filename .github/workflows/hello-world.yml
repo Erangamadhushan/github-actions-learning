@@ -36,4 +36,5 @@ jobs:
 
       
       - name: Access secret
-        run: echo "Secret length ${#{{ secrets.TEST_SECRET }}}"
+        run: |
+          echo "Secret length: ${{ secrets.TEST_SECRET }}" 
