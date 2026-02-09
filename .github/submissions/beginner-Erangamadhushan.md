@@ -50,3 +50,9 @@ Output: `http://localhost:3000/health`
 
 ![health](./ok.png)
 
+### Proof needed:
+
+- Task 1: Hello World workflow running ✅
+- Task 2: Workflow triggered by push event ✅
+- Task 3: Local tests passing with npm test ✅
+
