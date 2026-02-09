@@ -34,9 +34,6 @@ jobs:
       - name: Print success message
         run: echo "✅ Workflow completed successfully!"
 
-      - name: Print failure message
-        if: failure()
-        run: echo " Workflow failed, but this message is only printed if the previous steps failed."
       
       - name: Access secret
-        run: echo "My secret value is ${{ secrets.MY_SECRET }}"
+        run: echo "Secret length ${#{{ secrets.TEST_SECRET }}}"
