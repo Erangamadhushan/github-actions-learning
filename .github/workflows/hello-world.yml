@@ -33,3 +33,7 @@ jobs:
       
       - name: Print success message
         run: echo "✅ Workflow completed successfully!"
+
+      - name: Print failure message
+        if: failure()
+        run: echo "❌ Workflow failed!"
