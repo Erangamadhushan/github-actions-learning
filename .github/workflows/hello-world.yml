@@ -35,5 +35,5 @@ jobs:
         run: echo "✅ Workflow completed successfully!"
 
       - name: Print failure message
-        if: failure()
-        run: echo "❌ Workflow failed!"
+        if: success()
+        run: echo " Workflow succeeded, but this message is only printed if the previous steps were successful."
