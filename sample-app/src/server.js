@@ -31,6 +31,19 @@ app.get('/api/status', (req, res) => {
   });
 });
 
+app.get('/api/items', (req, res) => {
+  const items = [
+    { id: 1, name: 'Item One', price: 9.99 },
+    { id: 2, name: 'Item Two', price: 19.99 },
+    { id: 3, name: 'Item Three', price: 29.99 }
+  ];
+  res.json({
+    message: 'Here are your items',
+    items,
+    count: items.length
+  });
+});
+
 app.post('/api/data', (req, res) => {
   const { text } = req.body;
   
