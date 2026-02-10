@@ -74,6 +74,10 @@ app.get('/api/items', (req, res) => {
   });
 });
 ```
+## Output
+`http://localhost:3000/api/items`
+
+![Sample-app new api end point](./advanced/Screenshot%202026-02-10%20144432.png)
 
 # step 5,6, and 7 done with this pr and issue
 
