@@ -1,0 +1,27 @@
+name: Custom Node.js CI (Develop)
+
+on:
+  push:
+    branches:
+      - develop
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: Install dependencies
+        working-directory: sample-app
+        run: npm install
+
+      - name: Run tests
+        working-directory: sample-app
+        run: npm test
