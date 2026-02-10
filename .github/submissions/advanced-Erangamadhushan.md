@@ -51,10 +51,10 @@ Objective: Practice contribution workflow with templates
 ```bash
 git clone https://github.com/Erangamadhushan/github-actions-learning
 ```
-3. Create a new branch: `feature/my-feature`
+3. Create a new branch: `feature/add-items`
 
 ```bash
-    git checkout -b feature/my-feature
+    git checkout -b feature/add-items
 ```
 
 4. Do small changes for ./sample-app
