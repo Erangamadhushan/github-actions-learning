@@ -90,11 +90,15 @@ jobs:
     runs-on: ubuntu-latest
     needs: build-and-test
 
+    strategy:
+      matrix:
+        node-version: [16.x, 18.x]
+        
     steps:
       - name: Download artifact
         uses: actions/download-artifact@v4
         with:
-          name: build-output
+          name: build-output-${{ matrix.node-version }}
           path: downloaded
 
       - name: Verify artifact
