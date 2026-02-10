@@ -1,0 +1,23 @@
+name: Conditional Workflow
+
+on:
+    push:
+        branches: [main]
+    pull_request:
+        branches: [main]
+    workflow_dispatch:
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v4
+
+            - name: Always run this step
+              run: echo "This step always runs."
+
+            - name: Deploy (main only)
+              if: github.ref == 'refs/heads/main'
+              run: echo "This step runs only on the main branch."
